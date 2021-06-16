@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
-
+using System.IO;
 
 namespace Assign3
 {
@@ -27,10 +27,10 @@ namespace Assign3
 
         private void Form1_Load(object sender, EventArgs e)
         {
+            string path = "C:\\Users\\Matthew\\source\\repos\\MatthewDelapasse\\Assign3\\SQLBooksDB.mdf";
             //connect to books database
-
-            booksConnection = new SqlConnection("Data Source = .\\SQLEXPRESS; AttachDbFilename=|DataDirectory|\\SQLBooksDB.mdf;Integrated Security=True; Connect Timeout=30; User Instance=True");
-            // When the bulid event happens I changed the properties of the Build to not go to the debug folder but the application file itself
+            booksConnection = new SqlConnection("Data Source = .\\SQLEXPRESS; AttachDbFilename="+path+";Integrated Security=True; Connect Timeout=30; User Instance=True");
+            // This is how I made the relative path
 
             //open the connection
             booksConnection.Open();
