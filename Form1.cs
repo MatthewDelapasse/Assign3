@@ -30,6 +30,7 @@ namespace Assign3
             //connect to books database
 
             booksConnection = new SqlConnection("Data Source = .\\SQLEXPRESS; AttachDbFilename=|DataDirectory|\\SQLBooksDB.mdf;Integrated Security=True; Connect Timeout=30; User Instance=True");
+            // When the bulid event happens I changed the properties of the Build to not go to the debug folder but the application file itself
 
             //open the connection
             booksConnection.Open();
