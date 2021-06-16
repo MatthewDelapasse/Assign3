@@ -28,6 +28,7 @@ namespace Assign3
         private void Form1_Load(object sender, EventArgs e)
         {
             //connect to books database
+
             booksConnection = new SqlConnection("Data Source = .\\SQLEXPRESS; AttachDbFilename=|DataDirectory|\\SQLBooksDB.mdf;Integrated Security=True; Connect Timeout=30; User Instance=True");
 
             //open the connection
